@@ -1,0 +1,75 @@
+{
+    "name": "ncr-boilerplate",
+    "version": "1.0.0",
+    "description": "No-Code React Boilerplate",
+    "main": "index.js",
+    "scripts": {
+        "start": "npm-run-all --parallel dev-build dev-server",
+        "dev-build": "node scripts/build.mjs",
+        "dev-server": "node scripts/server.mjs",
+        "build": "cross-env NODE_ENV=production node scripts/build.mjs",
+        "build-icons": "npx capacitor-assets generate",
+        "dev-build-android": "npm run build && npx cap sync && cd android && gradlew.bat assembleDebug",
+        "build-android": "npm run build && npx cap sync && cd android && gradlew.bat assembleRelease",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://gitlab.com/pixmelt/ncr-boilerplate.git"
+    },
+    "keywords": [
+        "no-code",
+        "react",
+        "boilerplate"
+    ],
+    "author": "PIXMELT",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://gitlab.com/pixmelt/ncr-boilerplate/issues"
+    },
+    "browser": {
+        "os": "os-browserify",
+        "stream": "stream-browserify"
+    },
+    "homepage": "https://gitlab.com/pixmelt/ncr-boilerplate#readme",
+    "dependencies": {
+        "@capacitor/android": "^6.2.0",
+        "@capacitor/cli": "^6.2.0",
+        "@capacitor/core": "^6.2.0",
+        "@tensorflow/tfjs": "^4.1.0",
+        "@tensorflow/tfjs-backend-webgl": "^4.22.0",
+        "capp": "^0.1.0",
+        "cross-env": "^7.0.3",
+        "css-loader": "^7.1.2",
+        "dotenv": "^16.4.5",
+        "esbuild": "^0.20.1",
+        "esbuild-loader": "^4.2.2",
+        "esbuild-register": "^3.6.0",
+        "esbuild-sass-plugin": "^3.3.1",
+        "eslint": "^8.57.0",
+        "eslint-plugin-import": "^2.30.0",
+        "eslint-plugin-promise": "^7.1.0",
+        "eslint-plugin-react": "^7.35.2",
+        "express": "^4.19.2",
+        "file-loader": "^6.2.0",
+        "html-react-parser": "^5.1.15",
+        "node-red": "^4.0.2",
+        "os-browserify": "^0.3.0",
+        "postcss-loader": "^8.1.1",
+        "prettier": "^3.3.3",
+        "raw-loader": "^4.0.2",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-router-dom": "^6.26.1",
+        "sass": "^1.78.0",
+        "sass-loader": "^16.0.1",
+        "sha256": "^0.2.0",
+        "stream-browserify": "^3.0.0",
+        "style-loader": "^4.0.0",
+        "uniqid": "^5.4.0"
+    },
+    "devDependencies": {
+        "@capacitor/assets": "^3.0.5",
+        "npm-run-all": "^4.1.5"
+    }
+}

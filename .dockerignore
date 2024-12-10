@@ -1,0 +1,9 @@
+.env
+.gitignore
+
+android
+assets
+workspace
+
+Dockerfile
+docker-compose.yml

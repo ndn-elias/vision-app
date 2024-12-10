@@ -1,0 +1,40 @@
+.ncr-shortcuts {
+    max-width: 800px;
+    padding: 1em;
+    margin: 0 auto;
+
+    a, button {
+        display: inline-block;
+        text-decoration: none;
+        font-weight: bold;
+        color: #0d47a1;
+        font-size: inherit;
+        vertical-align: top;
+        transition: opacity 0.3s ease;
+        margin-right: 1em;
+        cursor: pointer;
+    
+        &.ncr-link-img {
+            background-color: #AF0000;
+            border: 2px solid rgba(143, 0, 0, 0.5);
+            border-radius: 0.8em;
+            color: #FFF;
+            overflow: hidden;
+    
+            & > img {
+                display: inline-block;
+                vertical-align: middle;
+            }
+    
+            & > span {
+                position: relative;
+                top: 0.1em;
+                padding: 0 1.2em;
+            }
+        }
+    
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
